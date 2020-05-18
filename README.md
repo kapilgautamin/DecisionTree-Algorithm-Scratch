@@ -32,6 +32,9 @@ consider a simple discretization strategy to pre-process them into binary featur
 example, a continuous feature x can be discretized using its mean as
 ![discrete_to_categorical](https://i.ibb.co/tKcjt8q/discrete-to-categorical.png)
 
+![Problem 1 Analysis and Report](https://github.com/kapilgautamin/DecisionTree-Algorithm-Scratch/blob/master/report_problem1.pdf)
+
+
 ---------------------------------------------------------------------------------------------------------------
 
 **Problem 2**: Implement Bagging and AdaBoost based on the decision tree code that you developed in previous problem.
@@ -59,3 +62,5 @@ bag size (k = 20; 40). Report the confusion matrix for these four settings.
 periments as described in parts (a) and (b) above. Report the confusion matrices for these sets of
 settings. What can you say about the quality of your implementation's performance versus scikit's
 performance?
+
+![Problem 2 Analysis and Report](https://github.com/kapilgautamin/DecisionTree-Algorithm-Scratch/blob/master/report_problem2.pdf)
