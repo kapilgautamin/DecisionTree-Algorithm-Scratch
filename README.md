@@ -1,4 +1,4 @@
-**Problem**: Implement a fixed-depth decision tree algorithm, that is, the input to the ID3 algorithm
+**Problem 1**: Implement a fixed-depth decision tree algorithm, that is, the input to the ID3 algorithm
 will include the training data and maximum depth of the tree to be learned.
 
 **Data Sets**: The data sets (in the folder ./data/) are obtained from the UCI Repository and are collectively
@@ -31,3 +31,31 @@ matrices. You can use other data sets in the UCI repository. If you encounter co
 consider a simple discretization strategy to pre-process them into binary features using the mean. For
 example, a continuous feature x can be discretized using its mean as
 ![discrete_to_categorical](https://i.ibb.co/tKcjt8q/discrete-to-categorical.png)
+
+---------------------------------------------------------------------------------------------------------------
+
+**Problem 2**: Implement Bagging and AdaBoost based on the decision tree code that you developed in previous problem.
+This code has to be modified to work with ensemble methods.
+- For this assignment, we will restrict ourselves to binary trees. This means that we will restrict ourselves
+to two splits instead of multiple possible splits at each node. More precisely, each node is restricted to
+be of the form xi = vk?, where it tests if the feature xi takes the value vk.
+- Implement three functions: bagging(x, y, max depth, num trees), boosting(x, y, max depth,
+num stumps) and predict example(x, h ens), where h ens is an ensemble of weighted hypotheses.
+The ensemble is represented as an array of pairs [(alpha i, h i)], where each hypothesis and weight
+are represented by the pair: (alpha i, h i).
+
+**Data Sets**: We will use the Mushroom Data Set1 from the UCI Repository for this assignment. There are
+22 attributes in this data set, of which we have dropped the attribute (stalk-root) as it contains too many
+missing values. The data set has been converted from string to integer, with the unique feature values being
+assigned indices starting from 0 in alphabetical order. Also note that rather than perform the classical task
+of predicting whether the mushroom is poisonous or edible, our classification task is to predict (bruises?).
+Experiments: Once you have debugged and tested your code, run the following experiments and write a
+brief report answering the following questions:
+- Construct four models for each combination of maximum depth d = 3; 5 and
+bag size (k = 10; 20). Report the confusion matrix for these four settings.
+- Construct four models for each combination of maximum depth d = 1; 2 and
+bag size (k = 20; 40). Report the confusion matrix for these four settings.
+- Use scikit-learn's bagging and AdaBoost learners and repeat the ex-
+periments as described in parts (a) and (b) above. Report the confusion matrices for these sets of
+settings. What can you say about the quality of your implementation's performance versus scikit's
+performance?
